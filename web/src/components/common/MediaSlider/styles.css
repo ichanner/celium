@@ -1,0 +1,34 @@
+.modal{
+
+  position: absolute;
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  border-width: 0px;
+  outline: none;
+}
+
+.modal-overlay{
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  background-color: rgba(29, 49, 65, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal:hover{
+
+  cursor: zoom-out;
+}
+
+.arrow:hover{
+
+  cursor: pointer;
+  opacity: .5
+}

@@ -1,0 +1,24 @@
+.play-button:{
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px; 
+	bottom: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.grid-container {
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .5rem;
+
+}
+
+.grid-item-large{
+
+	grid-column: span 2/auto;
+}

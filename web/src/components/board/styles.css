@@ -1,0 +1,35 @@
+/* For WebKit (Chrome, Safari) */
+/* The ::-webkit-scrollbar pseudo-element is used to target the scrollbar */
+/* Here, we set its width and height to 0 so it becomes invisible */
+/* You can also set other properties like background-color to customize its appearance */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* For Firefox */
+/* The scrollbar pseudo-elements for Firefox use the -moz- prefix */
+/* You can set width and height to 0, and other properties as needed */
+/* For Firefox, you might need to hide scrollbar thumb and track separately */
+/* Example below hides the thumb and track */
+* {
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.board-container{
+
+	display: flex;
+	
+}
+
+.post-container{
+
+
+}
+
+.post-seperator{
+
+	width: 3%;
+	background-color:red;
+	height: 100px;
+}

@@ -1,0 +1,48 @@
+.footer-container{
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+.stat-container{
+
+	display: flex;
+	cursor: pointer;
+	width: 10%;
+	justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.like-animation{
+
+	transform: rotate(-20deg) scale(1.5);
+}
+
+.stat-text{
+
+	color: white;
+	font-size: .8rem;
+	margin: 4%;
+}
+
+.reply-button{
+
+	position: relative;
+	cursor: pointer;
+	bottom: -5px;
+	padding:2%;
+	border-radius: 50px;
+	display: flex;
+	align-self: center;
+	align-items:center;
+	justify-content: center;
+}
+
+.reply-button:hover{
+
+	opacity: 0.6
+}

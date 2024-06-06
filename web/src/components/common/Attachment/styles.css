@@ -1,0 +1,21 @@
+
+.fullscreen-image{
+
+	object-fit: contain;
+	width:100%;
+	background-color: transparent;
+	aspect-ratio:1;
+	user-select: none;
+}
+
+.minimized-image{
+
+	object-fit: cover;
+	aspect-ratio: 1;
+	width: 100%;
+}
+
+.minimized-image:hover{
+
+	opacity: 0.9;
+}

@@ -1,0 +1,25 @@
+.post-content-container{
+
+	padding: 5% 5% 5% 2.5%;
+	overflow-wrap: break-word;
+	overflow:hidden;
+}
+
+.post-text{
+
+	font-size: 1rem;
+	color: white;
+}
+
+.show-more-text{
+
+	font-size: 1rem;
+	padding-left: 1%;
+	color: #808080;
+}
+
+.show-more-text:hover{
+
+	cursor: pointer;
+	text-decoration: underline;
+}

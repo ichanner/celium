@@ -1,0 +1,35 @@
+.menu-container{
+  
+  width:30%;
+  position: absolute;
+  border-radius: 10px;
+  padding: 1%;
+  overflow: hidden;
+  right:10%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #292d3e;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  z-index: 1;
+}
+
+.menu-button-container{
+
+  background-color: #292d3e;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  padding: 8% 5% 8% 5%;
+  cursor: pointer;
+}
+
+.menu-button-container:hover{
+
+  background-color: #414048;
+
+}
+
+

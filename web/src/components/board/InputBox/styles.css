@@ -1,0 +1,54 @@
+.input-container{
+
+	position: absolute;
+	width: 70%;
+	margin-left: 25%;
+	margin-bottom: 1%;
+	bottom: 0;
+	z-index: 1;
+}
+
+.child-container{
+
+	background-color: #292d3e;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	padding: 1%;
+	align-items: center;
+	border: 2px solid black;
+}
+
+.send-icon{
+	
+	position: absolute;
+	right: 0;
+	padding-right: 1%;
+}
+
+.attach-icon:hover{
+
+
+	cursor: pointer;
+	opacity: 0.5
+}
+
+.send-icon:hover{
+
+	cursor: pointer;
+	opacity: 0.5
+}
+
+.text-input{
+
+	width: 90%;
+	font-size: 1.1rem;
+	display: flex;
+	height: 100%;
+	padding-left: 1%;
+	color: white;
+	background-color: #292d3e;
+	outline: none;
+	border:none;
+
+}

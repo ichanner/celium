@@ -1,0 +1,96 @@
+
+.popup-modal{
+
+	position: absolute;
+	align-self: center;
+	display: flex;
+	background-color: transparent;
+	align-items: center;
+	justify-content: center;
+	outline: none;
+}	
+.popup-modal-overlay{
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  background-color: rgba(29, 49, 65, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-container{
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: auto;
+	background-color: #292d3e;
+	border-radius: 20px;
+}
+
+.popup-prompt{
+
+	font-size: 1rem;
+	padding: 5%;
+	text-align: left;
+	color: white;
+}
+
+.popup-label{
+
+	font-size: 1.3rem;
+	font-weight: 800;
+	padding-left: 5%;
+	padding-top: 5%;
+	color: white;
+}
+
+.popup-inputs-container{
+
+	margin-top: 5%;
+	display: flex;
+	flex-direction: column;
+}
+
+.popup-component-container{
+
+	width: 100%;
+	overflow-y: scroll;
+}
+
+.popup-button{
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+	width: 90%;
+	padding: 3%;
+	flex-shrink:1;
+	margin-bottom: 3%;
+	border-radius: 5px;
+	background-color: #4b68b3;
+}
+
+.popup-dismiss-button{
+
+	background-color: transparent;
+	border: 1px solid black;
+}
+
+.popup-button:hover{
+
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.popup-button-text{
+
+	color: white;
+	font-size: 1rem;
+	font-weight: 500;	
+}

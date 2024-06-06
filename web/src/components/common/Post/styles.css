@@ -1,0 +1,29 @@
+.post-container{
+
+	background-color: #292d3e;
+	border-radius: 30px;
+	border-left-width:5px;
+	border-left-left-radius: 10px;
+	border-left-right-radius: 10px;
+	border-top-width:5px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	margin: 0 auto;
+}
+
+
+
+/* Define the media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .post-container {
+    width: calc(90vw - 20px); /* Adjust the width for smaller screens */
+    /* Other styles for smaller screens */
+  }
+}
+
+.post-wrapper-container{
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

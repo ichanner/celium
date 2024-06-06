@@ -1,0 +1,1 @@
+API Architecture inspired by https://github.com/santiq/bulletproof-nodejs, I encourage all Node-JS devs to follow this design pattern

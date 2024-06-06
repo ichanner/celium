@@ -1,0 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config();
+export default {
+    DB_URI: process.env.DB_URI
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9jb25maWcvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsT0FBTyxNQUFNLE1BQU0sUUFBUSxDQUFBO0FBRTNCLE1BQU0sQ0FBQyxNQUFNLEVBQUUsQ0FBQTtBQUVmLGVBQWM7SUFFYixNQUFNLEVBQUcsT0FBTyxDQUFDLEdBQUcsQ0FBQyxNQUFnQjtDQUNyQyxDQUFBIn0=

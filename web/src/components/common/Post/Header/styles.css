@@ -1,0 +1,95 @@
+.post-header-container{
+
+	display: flex;
+	width:90%;
+	justify-content: space-between;
+	flex-direction: row; 
+	margin-top: 2%;
+	margin-left: 2%;
+	align-items: center;
+}
+
+.post-header-child-container{
+
+	display: flex;
+	position: relative;
+	width:100%;
+	flex-direction: row; 
+	align-items: center;
+}
+
+.username{
+
+	padding-left: 2%;
+	padding-right: 2%;
+	font-size: 1rem;
+	color: white;
+}
+
+.username:hover{
+
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.date{
+
+	font-size: 0.8rem;
+	color: #808080
+}
+
+.date:hover{
+
+	cursor: default;
+}
+
+.edit-icon{
+	
+	padding-left: 2%;
+}
+
+
+.menu-icon:hover{
+
+	opacity: 0.5;
+	cursor:pointer;
+}
+
+.title-container{
+
+
+},
+
+.title-text{
+
+	color: white; 
+	font-weight: bold;
+}
+
+.bridge-divider-container{
+
+	display: flex;
+	flex-direction: row; 
+	align-items: center;
+	margin: 5% 0% 5% 0%;
+}
+
+.bridge-divider-arc{
+    
+    display: flex;
+    height: 5%;
+    border-color: #808080;
+	border-top-width: 1px;
+	margin-top: 5%;
+	width: 5%
+},
+
+.bridge-divider-text{
+	
+	margin: 2% 2% 0% 2%;
+    font-size: 10px;
+    color: #808080;
+},
+
+
+

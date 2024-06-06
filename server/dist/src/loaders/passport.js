@@ -1,0 +1,34 @@
+import passport from 'passport';
+import { Container } from 'typedi';
+import { Strategy } from 'passport-google-oauth20';
+import config from "../config/index.js";
+import userService from "../services/user.js";
+export default () => {
+    passport.use(new Strategy({
+        clientID: config.CLIENT_ID,
+        clientSecret: config.CLIENT_SECRET,
+        callbackURL: config.HOSTNAME + "/auth/google/callback",
+        scope: ['profile'],
+        accessType: 'offline',
+        prompt: 'consent'
+    }, async (req, accessToken, refreshToken, profile, done) => {
+        try {
+            const service = Container.get(userService);
+            let user = await service.getUser(profile.id);
+            if (!user) {
+                user = await service.signUp(profile.id, profile.displayName, profile.picture);
+            }
+            done(null, user);
+        }
+        catch (err) {
+            done(err, null);
+        }
+    }));
+    passport.serializeUser((user, done) => {
+        done(null, user);
+    });
+    passport.deserializeUser((user, done) => {
+        done(null, user);
+    });
+};
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGFzc3BvcnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvbG9hZGVycy9wYXNzcG9ydC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLFFBQVEsTUFBTSxVQUFVLENBQUE7QUFDL0IsT0FBTyxFQUFDLFNBQVMsRUFBQyxNQUFNLFFBQVEsQ0FBQTtBQUNoQyxPQUFPLEVBQUMsUUFBUSxFQUFDLE1BQU0seUJBQXlCLENBQUE7QUFDaEQsT0FBTyxNQUFNLE1BQU0sb0JBQW9CLENBQUE7QUFDdkMsT0FBTyxXQUFXLE1BQU0scUJBQXFCLENBQUE7QUFHN0MsZUFBZSxHQUFHLEVBQUU7SUFFbkIsUUFBUSxDQUFDLEdBQUcsQ0FBQyxJQUFJLFFBQVEsQ0FBQztRQUV6QixRQUFRLEVBQUUsTUFBTSxDQUFDLFNBQVM7UUFDMUIsWUFBWSxFQUFFLE1BQU0sQ0FBQyxhQUFhO1FBQ2xDLFdBQVcsRUFBRSxNQUFNLENBQUMsUUFBUSxHQUFHLHVCQUF1QjtRQUN0RCxLQUFLLEVBQUMsQ0FBQyxTQUFTLENBQUM7UUFDakIsVUFBVSxFQUFDLFNBQVM7UUFDcEIsTUFBTSxFQUFDLFNBQVM7S0FFaEIsRUFBRSxLQUFLLEVBQUUsR0FBRyxFQUFFLFdBQVcsRUFBRSxZQUFZLEVBQUUsT0FBTyxFQUFFLElBQUksRUFBQyxFQUFFO1FBRXpELElBQUc7WUFFRixNQUFNLE9BQU8sR0FBRyxTQUFTLENBQUMsR0FBRyxDQUFDLFdBQVcsQ0FBQyxDQUFBO1lBQzFDLElBQUksSUFBSSxHQUFHLE1BQU0sT0FBTyxDQUFDLE9BQU8sQ0FBQyxPQUFPLENBQUMsRUFBRSxDQUFDLENBQUE7WUFFNUMsSUFBRyxDQUFDLElBQUksRUFBQztnQkFFUixJQUFJLEdBQUcsTUFBTSxPQUFPLENBQUMsTUFBTSxDQUFDLE9BQU8sQ0FBQyxFQUFFLEVBQUUsT0FBTyxDQUFDLFdBQVcsRUFBRSxPQUFPLENBQUMsT0FBTyxDQUFDLENBQUE7YUFDN0U7WUFFRCxJQUFJLENBQUMsSUFBSSxFQUFFLElBQUksQ0FBQyxDQUFBO1NBQ2hCO1FBQ0QsT0FBTSxHQUFHLEVBQUM7WUFFVCxJQUFJLENBQUMsR0FBRyxFQUFFLElBQUksQ0FBQyxDQUFBO1NBQ2Y7SUFDRixDQUFDLENBQUMsQ0FBQyxDQUFBO0lBRUgsUUFBUSxDQUFDLGFBQWEsQ0FBQyxDQUFDLElBQVUsRUFBRSxJQUFVLEVBQUMsRUFBRTtRQUVoRCxJQUFJLENBQUMsSUFBSSxFQUFFLElBQUksQ0FBQyxDQUFBO0lBQ2pCLENBQUMsQ0FBQyxDQUFBO0lBRUYsUUFBUSxDQUFDLGVBQWUsQ0FBQyxDQUFDLElBQVUsRUFBRSxJQUFVLEVBQUMsRUFBRTtRQUVsRCxJQUFJLENBQUMsSUFBSSxFQUFFLElBQUksQ0FBQyxDQUFBO0lBQ2pCLENBQUMsQ0FBQyxDQUFBO0FBRUgsQ0FBQyxDQUFBIn0=
